@@ -1,0 +1,13 @@
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\bin\Debug\netcoreapp3.1\Oshodi.exe
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\bin\Debug\netcoreapp3.1\Oshodi.deps.json
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\bin\Debug\netcoreapp3.1\Oshodi.runtimeconfig.json
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\bin\Debug\netcoreapp3.1\Oshodi.runtimeconfig.dev.json
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\bin\Debug\netcoreapp3.1\Oshodi.dll
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\bin\Debug\netcoreapp3.1\Oshodi.pdb
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.csprojAssemblyReference.cache
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.AssemblyInfoInputs.cache
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.AssemblyInfo.cs
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.csproj.CoreCompileInputs.cache
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.dll
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.pdb
+C:\Users\shola\OneDrive\Documenti\GitHub\OOP20-bdefender-c-sharp\Oshodi\Oshodi\Oshodi\obj\Debug\netcoreapp3.1\Oshodi.genruntimeconfig.cache
