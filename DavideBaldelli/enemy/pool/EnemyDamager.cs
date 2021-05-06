@@ -1,12 +1,10 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 
-namespace OOP20bdefender.DavideBaldelli.enemy
+namespace OOP20bdefender.DavideBaldelli.enemy.pool
 {
-    interface EnemyDamager
+    interface EnemyDamager : EnemyPool
     {
-        Dictionary<int, Enemy> getEnemies();
         void applyDamageById(int id, double damage);
     }
 }

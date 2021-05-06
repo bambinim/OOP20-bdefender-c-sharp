@@ -1,4 +1,4 @@
-﻿using OOP20bdefender.DavideBaldelli.enemy;
+﻿using OOP20bdefender.DavideBaldelli.enemy.pool;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace OOP20bdefender.DavideBaldelli.tower.interactor
         public Dictionary<int, Pair<double, double>> getEnemiesInZone(double radius, Pair<double, double> center)
         {
             return this.damager.getEnemies()
-                .Where(e => e.Value.isAlive())
+                .Where(e => e.Value.isAlive() && !e.Value.isArrived())
                 .Where(e => Math.Sqrt(Math.Pow(center.X - e.Value.getPosition().X, 2) + Math.Pow(center.Y - e.Value.getPosition().Y, 2)) <= radius)
                 .ToDictionary(e => e.Key,  e => e.Value.getPosition());
         }

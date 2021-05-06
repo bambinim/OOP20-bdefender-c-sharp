@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +54,21 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DavideBaldelli\enemy\Enemy.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\EnemiesPooImpl.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\EnemyDamager.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\EnemyMover.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\EnemyPool.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\EnemySpawner.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\interactors\MapInteractor.cs" />
+    <Compile Include="DavideBaldelli\tower\interactor\DirectTowerEnemiesInteractor.cs" />
+    <Compile Include="DavideBaldelli\tower\interactor\DirectTowerInteractorImpl.cs" />
+    <Compile Include="DavideBaldelli\tower\interactor\EnemiesInteractor.cs" />
+    <Compile Include="DavideBaldelli\tower\interactor\SelectCloserEnemy.cs" />
+    <Compile Include="DavideBaldelli\tower\interactor\TargetSelectionAlgorithm.cs" />
+    <Compile Include="DavideBaldelli\tower\Tower.cs" />
+    <Compile Include="DavideBaldelli\tower\TowerData.cs" />
+    <Compile Include="DavideBaldelli\tower\TowerFactory.cs" />
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
