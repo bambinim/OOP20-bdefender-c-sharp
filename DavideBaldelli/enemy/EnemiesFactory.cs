@@ -10,7 +10,7 @@ namespace OOP20bdefender.DavideBaldelli.enemy
 
     class EnemiesFactory
     {
-        static Enemy GetEnemy(EnemyData data, EnemyEvent onEnemyArrived, EnemyEvent onDeath)
+        public static Enemy GetEnemy(EnemyData data, EnemyEvent onEnemyArrived, EnemyEvent onDeath)
         {
             return new CustomEnemy(data, onEnemyArrived, onDeath);
         }

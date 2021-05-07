@@ -54,8 +54,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DavideBaldelli\enemy\EnemiesFactory.cs" />
     <Compile Include="DavideBaldelli\enemy\Enemy.cs" />
-    <Compile Include="DavideBaldelli\enemy\pool\EnemiesPooImpl.cs" />
+    <Compile Include="DavideBaldelli\enemy\EnemyData.cs" />
+    <Compile Include="DavideBaldelli\enemy\pool\EnemiesPoolImpl.cs" />
     <Compile Include="DavideBaldelli\enemy\pool\EnemyDamager.cs" />
     <Compile Include="DavideBaldelli\enemy\pool\EnemyMover.cs" />
     <Compile Include="DavideBaldelli\enemy\pool\EnemyPool.cs" />
