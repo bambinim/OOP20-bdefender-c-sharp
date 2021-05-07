@@ -104,9 +104,12 @@ namespace OOP20bdefender.DavideBaldelli.controller
 
             public void startMoving()
             {
-                Thread.Sleep((int)(TEN_SEC / SPEED_DIV));
-                this.mover.moveEnemies(SPEED_DIV);
-                this.gMover(mover.getEnemies().Where(e => e.Value.isAlive() && !e.Value.isArrived()).Select(e => e.Value).ToList());
+                while (true)
+                {
+                    Thread.Sleep((int)(TEN_SEC / SPEED_DIV));
+                    this.mover.moveEnemies(SPEED_DIV);
+                    this.gMover(mover.getEnemies().Where(e => e.Value.isAlive() && !e.Value.isArrived()).Select(e => e.Value).ToList());
+                }
             }
         }
     }
