@@ -17,7 +17,7 @@ namespace OOP20bdefender.DavideBaldelli.tower
 
         public static Tower GetDirectShootTower(TowerData towerData, DirectTowerEnemiesInteractor interactor, Pair<Double, Double> pos)
         {
-            return new CustomTower(towerData, interactor, pos, new SelectCloserEnemy(), (id, tower) => interactor.applyDamageById(id, towerData.damage * ((tower.getLevel() - 1) * NEXT_LEVEL_MULT)));
+            return new CustomTower(towerData, interactor, pos, new SelectCloserEnemy(), (id, tower) => interactor.applyDamageById(id, towerData.damage + ((tower.getLevel() - 1) * NEXT_LEVEL_MULT)));
         }
 
 
@@ -62,6 +62,7 @@ namespace OOP20bdefender.DavideBaldelli.tower
                 try
                 {
                     int targetId = this.getOptimalTarget();
+                    Console.WriteLine("Shooting at enemy [" + targetId + "]");
                     damageApplier(targetId, this);
                     return this.interactor.getEnemyPosById(targetId);
                 }

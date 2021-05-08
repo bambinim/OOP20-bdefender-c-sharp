@@ -8,8 +8,8 @@ namespace OOP20bdefender.DavideBaldelli.tower
 {
     public struct TowerData
     {
-        static TowerData FIRE_ARROW = new TowerData("Fire Arrow", 0, 200, 50, 13, 7, 8);
-        static TowerData FIRE_BALL = new TowerData("Fire Ball", 1, 100, 30, 20, 7, 5);
+        public static TowerData FIRE_ARROW = new TowerData("Fire Arrow", 0, 200, 50, 10, 7, 8);
+        public static TowerData FIRE_BALL = new TowerData("Fire Ball", 1, 100, 30, 12, 7, 5);
 
         String name { get; }
         public int id { get; }

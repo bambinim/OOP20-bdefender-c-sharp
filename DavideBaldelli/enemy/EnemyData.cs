@@ -8,8 +8,8 @@ namespace OOP20bdefender.DavideBaldelli.enemy
 {
     struct EnemyData
     {
-        public static EnemyData AXE_OGRE = new EnemyData(4, 40, 30, 1);
-        public static EnemyData SWORD_OGRE = new EnemyData(3, 60, 35, 0);
+        public static EnemyData AXE_OGRE = new EnemyData(4, 20, 30, 1);
+        public static EnemyData SWORD_OGRE = new EnemyData(3, 30, 35, 0);
         public double damage { get; }
         public double speed { get; }
         public double life { get; }
