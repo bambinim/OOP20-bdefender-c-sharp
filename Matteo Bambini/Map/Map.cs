@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Gtk;
 using System.IO;
 using System.Linq;
 
-namespace OOP20bdefender.MatteoBambini.Map
+namespace OOP20_bdefender.MatteoBambini.Map
 {
     public class Map:IMap
     {
-        private Gtk.Image mapImage;
+        private byte[] mapImage;
         private IList<Coordinates> path;
         private IList<TowerBox> towerBoxes;
 
@@ -22,12 +21,12 @@ namespace OOP20bdefender.MatteoBambini.Map
             get { return this.towerBoxes; }
         }
 
-        public Image MapImage
+        public byte[] MapImage
         {
             get { return this.mapImage; }
         }
 
-        public Map(Gtk.Image mapImage, IList<Coordinates> path, IList<TowerBox> towerBoxes)
+        public Map(byte[] mapImage, IList<Coordinates> path, IList<TowerBox> towerBoxes)
         {
             this.mapImage = mapImage;
             this.path = path;

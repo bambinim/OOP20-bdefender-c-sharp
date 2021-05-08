@@ -1,5 +1,5 @@
 ﻿using System;
-namespace OOP20bdefender.MatteoBambini.Map
+namespace OOP20_bdefender.MatteoBambini.Map
 {
     public class Coordinates : Pair<Double, Double>
     {

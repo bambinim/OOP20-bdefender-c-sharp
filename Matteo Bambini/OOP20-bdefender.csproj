@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OOP20_bdefender</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\maps\0\path.txt" />
+    <None Remove="resources\maps\0\map.png" />
+    <None Remove="resources\maps\0\towerboxes.txt" />
+    <None Remove="resources\maps\1\path.txt" />
+    <None Remove="resources\maps\1\map.png" />
+    <None Remove="resources\maps\1\towerboxes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\maps\0\path.txt" />
+    <EmbeddedResource Include="resources\maps\0\map.png" />
+    <EmbeddedResource Include="resources\maps\0\towerboxes.txt" />
+    <EmbeddedResource Include="resources\maps\1\path.txt" />
+    <EmbeddedResource Include="resources\maps\1\map.png" />
+    <EmbeddedResource Include="resources\maps\1\towerboxes.txt" />
+  </ItemGroup>
+</Project>

@@ -1,12 +1,12 @@
 ﻿using System;
-namespace OOP20bdefender.MatteoBambini.Map
+namespace OOP20_bdefender.MatteoBambini.Map
 {
     public class TowerBox
     {
         private readonly Coordinates topLeftCoord;
-        private String tower = null;
+        private string tower = null;
 
-        public String Tower
+        public string Tower
         {
             get { return this.tower; }
             set { this.tower = value; }

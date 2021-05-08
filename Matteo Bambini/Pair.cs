@@ -1,5 +1,5 @@
 ﻿using System;
-namespace OOP20bdefender
+namespace OOP20_bdefender
 {
     public class Pair<T1, T2>
     {

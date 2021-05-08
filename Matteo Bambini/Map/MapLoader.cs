@@ -1,9 +1,9 @@
 ﻿using System;
-using Gtk;
 using System.IO;
 using System.Collections.Generic;
+using System.Reflection;
 
-namespace OOP20bdefender.MatteoBambini.Map
+namespace OOP20_bdefender.MatteoBambini.Map
 {
     public class MapLoader
     {
@@ -16,16 +16,19 @@ namespace OOP20bdefender.MatteoBambini.Map
 
         public Map LoadMap(int map)
         {
-            return new Map(this.LoadMapImage(String.Format("resources/maps/{0}/map.png", map)),
-                this.LoadPath(String.Format("resources/maps/{0}/path.txt", map)),
-                this.LoadTowerBoxes(String.Format("resources/maps/{0}/towerboxes.txt", map)));
+            return new Map(this.LoadMapImage(String.Format("OOP20_bdefender.resources.maps._{0}.map.png", map)),
+                this.LoadPath(String.Format("OOP20_bdefender.resources.maps._{0}.path.txt", map)),
+                this.LoadTowerBoxes(String.Format("OOP20_bdefender.resources.maps._{0}.towerboxes.txt", map)));
         }
 
-        private Image LoadMapImage(String imageFile)
+        private byte[] LoadMapImage(String imageFile)
         {
             try
             {
-                return Image.LoadFromResource(imageFile);
+                var stream = Assembly.GetEntryAssembly().GetManifestResourceStream(imageFile);
+                MemoryStream ms = new MemoryStream();
+                stream.CopyTo(ms);
+                return ms.ToArray();
             }
             catch (Exception)
             {
@@ -38,13 +41,15 @@ namespace OOP20bdefender.MatteoBambini.Map
             IList<Coordinates> path = new List<Coordinates>();
             try
             {
-                StreamReader fileReader = new StreamReader(File.OpenRead(filePath));
+                var stream = Assembly.GetEntryAssembly().GetManifestResourceStream(filePath);
+                StreamReader fileReader = new StreamReader(stream);
                 String line;
                 while ((line = fileReader.ReadLine()) != null)
                 {
                     path.Add(this.ParseCoordinates(line));
                 }
                 fileReader.Close();
+                stream.Close();
             }
             catch (IOException)
             {
@@ -58,7 +63,8 @@ namespace OOP20bdefender.MatteoBambini.Map
             IList<TowerBox> towerBoxes = new List<TowerBox>();
             try
             {
-                StreamReader fileReader = new StreamReader(File.OpenRead(towerBoxesFile));
+                var stream = Assembly.GetEntryAssembly().GetManifestResourceStream(towerBoxesFile);
+                StreamReader fileReader = new StreamReader(stream);
                 String line;
                 while ((line = fileReader.ReadLine()) != null)
                 {
@@ -80,6 +86,8 @@ namespace OOP20bdefender.MatteoBambini.Map
                         towerBoxes.Add(new TowerBox(this.ParseCoordinates(tmp[0])));
                     }
                 }
+                fileReader.Close();
+                stream.Close();
             }
             catch (IOException)
             {

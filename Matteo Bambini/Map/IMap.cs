@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace OOP20bdefender.MatteoBambini.Map
+namespace OOP20_bdefender.MatteoBambini.Map
 {
     public interface IMap
     {
@@ -8,6 +8,6 @@ namespace OOP20bdefender.MatteoBambini.Map
         IList<TowerBox> TowerBoxes { get; }
         IList<TowerBox> GetEmptyTowerBoxes();
         IList<TowerBox> GetOccupiedTowerBoxes();
-        Gtk.Image MapImage { get; }
+        byte[] MapImage { get; }
     }
 }
