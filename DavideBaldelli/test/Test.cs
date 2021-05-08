@@ -1,4 +1,5 @@
 ﻿using OOP20bdefender.DavideBaldelli.controller;
+using OOP20bdefender.MatteoBambini.Map;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,37 @@ namespace OOP20bdefender.DavideBaldelli.test
     {
         public static void Main(string []args)
         {
-            EnemyController enemyController = new EnemyControllerImpl(, t => Console.WriteLine("moving enemies un ui..."));
+            MapTest map = new MapTest();
+            EnemyController enemyController = new EnemyControllerImpl(map, t => { });
+            enemyController.startGenerate(6, 1, e => Console.WriteLine("An enemy as reached the end"), e => Console.WriteLine("An Enemy as died"));
+        }
+
+        class MapTest : IMap
+        {
+            public IList<Coordinates> Path { 
+                get {
+                    List<Coordinates> coordinates = new List<Coordinates>();
+                    coordinates.Add(new Coordinates(0, 9));
+                    coordinates.Add(new Coordinates(7, 9));
+                    coordinates.Add(new Coordinates(7, 18));
+                    coordinates.Add(new Coordinates(14, 18));
+                    return coordinates; 
+                } 
+            }
+
+            public IList<TowerBox> TowerBoxes => throw new NotImplementedException();
+
+            public Gtk.Image MapImage => throw new NotImplementedException();
+
+            public IList<TowerBox> GetEmptyTowerBoxes()
+            {
+                throw new NotImplementedException();
+            }
+
+            public IList<TowerBox> GetOccupiedTowerBoxes()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

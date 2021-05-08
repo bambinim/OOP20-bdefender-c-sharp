@@ -15,7 +15,7 @@ namespace OOP20bdefender.DavideBaldelli.controller
         private Thread moverThread;
         private Thread spawnerThread;
 
-        public EnemyControllerImpl(Map map, GraphicMover gMover)
+        public EnemyControllerImpl(IMap map, GraphicMover gMover)
         {
             this.pool = new EnemiesPoolImpl(new MapInteractorImpl(map));
             MoverThread mover = new MoverThread((EnemyMover)this.pool, gMover);
@@ -93,7 +93,7 @@ namespace OOP20bdefender.DavideBaldelli.controller
         {
             private EnemyMover mover;
             private GraphicMover gMover;
-            private static long SPEED_DIV = 1000;
+            private static long SPEED_DIV = 10;
             private static long TEN_SEC = 10000;
 
             public MoverThread(EnemyMover mover, GraphicMover gMover)

@@ -48,6 +48,7 @@ namespace OOP20bdefender.DavideBaldelli.enemy.pool
                 {
                     try
                     {
+                        
                         enemy.moveTo(getNextValidPos(getNextPos(enemy.getDirection(), enemy.getPosition(), new Pair<Double, Double>(enemy.getSpeed() / speedDiv, enemy.getSpeed() / speedDiv)), enemy));
                     }
                     catch (EnemyReachedEndException ex)
@@ -61,13 +62,13 @@ namespace OOP20bdefender.DavideBaldelli.enemy.pool
 
         private bool isAfterKeyPoint(Pair<Double, Double> pos, Pair<Double, Double> keyPoint, Pair<int, int> dir)
         {
-            return ((pos.X - keyPoint.X) > 0 && pos.Y.Equals(keyPoint.Y)) || (pos.X.Equals(keyPoint.X) && (pos.Y - keyPoint.Y) * dir.Y > 0);
+            return ((pos.X - keyPoint.X) > 0 && pos.Y == keyPoint.Y ) || (pos.X == keyPoint.X && (pos.Y - keyPoint.Y) * dir.Y > 0);
 
         }
 
         private bool keyPointIsAfter(Pair<Double, Double> p1, Pair<Double, Double> p2, Pair<int, int> dir)
         {
-            return (p1.X >= p2.X) && (p1.Y - p2.Y) * dir.Y >= 0;
+            return (p1.X >= p2.X) && ((p1.Y - p2.Y) * dir.Y) >= 0;
         }
 
         private Pair<Double, Double> getNextPos(Pair<int, int> dir, Pair<Double, Double> currPos, Pair<Double, Double> distance)
@@ -85,13 +86,15 @@ namespace OOP20bdefender.DavideBaldelli.enemy.pool
             Pair<Double, Double> nxtPos = nextPosSimple;
             foreach (Pair<Double, Double> keyPoint in keyPoints)
             {
+                
                 if (keyPointIsAfter(keyPoint, currPos, dir) && isAfterKeyPoint(nxtPos, keyPoint, dir))
                 {
+                    Console.WriteLine("enemy changed dir at [" + currPos.X + ", " + currPos.Y + "]");
                     int nextXDir = dir.X == 0 ? 1 : 0;
                     int nextYDir = 0;
                     if (keyPoints.IndexOf(keyPoint) + 1 == keyPoints.Count())
                     {
-                        throw new EnemyReachedEndException("Enemy rached end");
+                        throw new EnemyReachedEndException("Enemy reached end");
                     }
                     else
                     {
@@ -106,6 +109,7 @@ namespace OOP20bdefender.DavideBaldelli.enemy.pool
                     break;
                 }
             }
+            Console.WriteLine("moving enemy to [" + nxtPos.X + ", "+ nxtPos.Y +"]");
             return nxtPos;
         }
 
