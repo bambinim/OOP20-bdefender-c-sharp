@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOP20bdefender.DavideBaldelli.enemy.pool
 {
-    class EnemiesPoolImpl : EnemyDamager, EnemyMover, EnemySpawner
+    public class EnemiesPoolImpl : EnemyDamager, EnemyMover, EnemySpawner
     {
         private Dictionary<int, Enemy> enemies = new Dictionary<int, Enemy>();
         private int counter = 0;

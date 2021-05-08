@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP20bdefender.DavideBaldelli.enemy
 {
-    interface Enemy
+    public interface Enemy
     {
 
         Pair<Double, Double> getPosition();
