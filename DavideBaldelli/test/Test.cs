@@ -1,7 +1,7 @@
 ﻿using OOP20bdefender.DavideBaldelli.controller;
+using OOP20bdefender.DavideBaldelli.map;
 using OOP20bdefender.DavideBaldelli.tower;
 using OOP20bdefender.DavideBaldelli.tower.view;
-using OOP20bdefender.MatteoBambini.Map;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,30 +24,18 @@ namespace OOP20bdefender.DavideBaldelli.test
 
         class MapTest : IMap
         {
-            public IList<Coordinates> Path { 
-                get {
-                    List<Coordinates> coordinates = new List<Coordinates>();
-                    coordinates.Add(new Coordinates(0, 9));
-                    coordinates.Add(new Coordinates(7, 9));
-                    coordinates.Add(new Coordinates(7, 18));
-                    coordinates.Add(new Coordinates(14, 18));
-                    coordinates.Add(new Coordinates(14, 3));
-                    return coordinates; 
-                } 
-            }
-
-            public IList<TowerBox> TowerBoxes => throw new NotImplementedException();
-
-            public Gtk.Image MapImage => throw new NotImplementedException();
-
-            public IList<TowerBox> GetEmptyTowerBoxes()
+            public IList<Pair<double, double>> Path
             {
-                throw new NotImplementedException();
-            }
-
-            public IList<TowerBox> GetOccupiedTowerBoxes()
-            {
-                throw new NotImplementedException();
+                get
+                {
+                    List<Pair<Double, Double>> coordinates = new List<Pair<Double, Double>>();
+                    coordinates.Add(new Pair<Double, Double>(0, 9));
+                    coordinates.Add(new Pair<Double, Double>(7, 9));
+                    coordinates.Add(new Pair<Double, Double>(7, 18));
+                    coordinates.Add(new Pair<Double, Double>(14, 18));
+                    coordinates.Add(new Pair<Double, Double>(14, 3));
+                    return coordinates;
+                }
             }
         }
 
