@@ -1,7 +1,0 @@
-/Users/matteo/Documents/GitHub/OOP20-bdefender-c-sharp/OOP20-bdefender/bin/Debug/OOP20-bdefender.exe
-/Users/matteo/Documents/GitHub/OOP20-bdefender-c-sharp/OOP20-bdefender/bin/Debug/OOP20-bdefender.pdb
-/Users/matteo/Documents/GitHub/OOP20-bdefender-c-sharp/OOP20-bdefender/obj/anycpu/Debug/OOP20-bdefender.csprojAssemblyReference.cache
-/Users/matteo/Documents/GitHub/OOP20-bdefender-c-sharp/OOP20-bdefender/obj/anycpu/Debug/OOP20-bdefender.csproj.CoreCompileInputs.cache
-/Users/matteo/Documents/GitHub/OOP20-bdefender-c-sharp/OOP20-bdefender/obj/anycpu/Debug/OOP20-bdefender.exe
-/Users/matteo/Documents/GitHub/OOP20-bdefender-c-sharp/OOP20-bdefender/obj/anycpu/Debug/OOP20-bdefender.pdb
-C:\Users\david\Documents\GitHub\OOP20-bdefender-c-sharp\obj\anycpu\Debug\OOP20-bdefender.csproj.CoreCompileInputs.cache
