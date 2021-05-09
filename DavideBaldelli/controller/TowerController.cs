@@ -9,10 +9,10 @@ namespace OOP20bdefender.DavideBaldelli.controller
 {
     interface TowerController
     {
-        Tower addTower(TowerData data, Pair<Double, Double> pos);
+        ITower addTower(TowerData data, Pair<Double, Double> pos);
 
-        void removeTower(Tower tower);
+        void removeTower(ITower tower);
 
-        int upgradeTower(Tower tower);
+        int upgradeTower(ITower tower);
     }
 }

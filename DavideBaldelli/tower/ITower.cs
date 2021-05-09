@@ -2,7 +2,7 @@
 
 namespace OOP20bdefender.DavideBaldelli.tower
 {
-    interface Tower
+    interface ITower
     {
         Pair<Double, Double> shoot();
 

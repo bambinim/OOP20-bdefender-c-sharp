@@ -73,6 +73,7 @@
     <Compile Include="DavideBaldelli\enemy\pool\interactors\MapInteractor.cs" />
     <Compile Include="DavideBaldelli\enemy\pool\interactors\MapInteractorImpl.cs" />
     <Compile Include="DavideBaldelli\map\IMap.cs" />
+    <Compile Include="DavideBaldelli\Pair.cs" />
     <Compile Include="DavideBaldelli\test\Test.cs" />
     <Compile Include="DavideBaldelli\tower\interactor\DirectTowerEnemiesInteractor.cs" />
     <Compile Include="DavideBaldelli\tower\interactor\DirectTowerInteractorImpl.cs" />

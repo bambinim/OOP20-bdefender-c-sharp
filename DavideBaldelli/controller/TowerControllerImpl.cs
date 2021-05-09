@@ -10,21 +10,21 @@ namespace OOP20bdefender.DavideBaldelli.controller
 {
     class TowerControllerImpl : TowerController
     {
-        public delegate TowerView GetTowerView(Tower tower);
+        public delegate TowerView GetTowerView(ITower tower);
 
 
         private GetTowerView getView;
         private EnemyDamager damager;
-        private Dictionary<Tower, Thread> towersThreads = new Dictionary<Tower, Thread>(); 
+        private Dictionary<ITower, Thread> towersThreads = new Dictionary<ITower, Thread>(); 
 
         public TowerControllerImpl(GetTowerView getView, EnemyDamager damager)
         {
             this.damager = damager;
             this.getView = getView;
         }
-        public Tower addTower(TowerData data, Pair<double, double> pos)
+        public ITower addTower(TowerData data, Pair<double, double> pos)
         {
-            Tower tower = TowerFactory.GetDirectShootTower(data, new DirectTowerInteractorImpl(this.damager), pos);
+            ITower tower = TowerFactory.GetDirectShootTower(data, new DirectTowerInteractorImpl(this.damager), pos);
             TowerView view = this.getView(tower);
             TowerThread t = new TowerThread(tower, view);
             Thread towerThread = new Thread(new ThreadStart(t.start));
@@ -33,13 +33,13 @@ namespace OOP20bdefender.DavideBaldelli.controller
             return tower;
         }
 
-        public void removeTower(Tower tower)
+        public void removeTower(ITower tower)
         {
             this.towersThreads[tower].Abort();
             this.towersThreads.Remove(tower);
         }
 
-        public int upgradeTower(Tower tower)
+        public int upgradeTower(ITower tower)
         {
             return tower.upgradeLevel();
         }
@@ -48,9 +48,9 @@ namespace OOP20bdefender.DavideBaldelli.controller
         {
             private static long TEN_SECONDS = 10000;
             private TowerView view;
-            private Tower tower;
+            private ITower tower;
 
-            public TowerThread(Tower tower, TowerView view)
+            public TowerThread(ITower tower, TowerView view)
             {
                 this.view = view;
                 this.tower = tower;

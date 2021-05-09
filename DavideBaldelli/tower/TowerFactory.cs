@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 namespace OOP20bdefender.DavideBaldelli.tower
 {
 
-    delegate void DamageApplier(int id, Tower tower);
+    delegate void DamageApplier(int id, ITower tower);
 
     class TowerFactory
     {
 
         private static double NEXT_LEVEL_MULT = 0.25;
 
-        public static Tower GetDirectShootTower(TowerData towerData, DirectTowerEnemiesInteractor interactor, Pair<Double, Double> pos)
+        public static ITower GetDirectShootTower(TowerData towerData, DirectTowerEnemiesInteractor interactor, Pair<Double, Double> pos)
         {
             return new CustomTower(towerData, interactor, pos, new SelectCloserEnemy(), (id, tower) => interactor.applyDamageById(id, towerData.damage + ((tower.getLevel() - 1) * NEXT_LEVEL_MULT)));
         }
 
 
-        private class CustomTower : Tower
+        private class CustomTower : ITower
         {
             private TowerData data;
             private EnemiesInteractor interactor;
