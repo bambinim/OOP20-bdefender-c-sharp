@@ -10,16 +10,6 @@ namespace Statistics
     {
         static void Main(string[] args)
         {
-           string completePath = FileInformation.STATFILE.FilePath + Path.DirectorySeparatorChar + FileInformation.STATFILE.FileName;
-            StatisticsWriter writer = new StatisticsWriter();
-            writer.GameStarted(MapType.COUNTRYSIDE);
-            writer.GameFinished(666);
-            writer.SaveStatistics();
-            Console.WriteLine("Creato clicca per cancellare");
-            Console.ReadLine();
-            writer.ResetAllStatistics();
-            Console.WriteLine(completePath);
-            Console.ReadLine();
         }
     }
 }
