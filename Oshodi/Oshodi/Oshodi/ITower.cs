@@ -2,6 +2,9 @@
 
 public interface ITower
 {
-	void upgradeTower();
-	String getName();
+	void UpgradeTower();
+	int GetTowerTypeId();
+
+
+
 }

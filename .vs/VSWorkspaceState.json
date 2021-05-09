@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Oshodi"
+    "\\Oshodi",
+    "\\Oshodi\\Oshodi",
+    "\\Oshodi\\TestOshodi"
   ],
-  "SelectedNode": "\\Oshodi",
+  "SelectedNode": "\\Oshodi\\Oshodi\\Oshodi.sln",
   "PreviewInSolutionExplorer": false
 }

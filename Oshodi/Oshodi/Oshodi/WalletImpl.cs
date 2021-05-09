@@ -3,8 +3,8 @@
 public class WalletImpl : Wallet
 {
     const int NEG_LIMIT = -1;
-    private int UserMoney;
-
+    private int UserMoney = 0;
+    //Set the initial amount of money
     public WalletImpl(int InitAmount) {
         this.UserMoney = InitAmount;
     }
@@ -14,6 +14,7 @@ public class WalletImpl : Wallet
         this.UserMoney = this.UserMoney + value;
     }
 
+    //check if there are enough money to do something
     public bool AreMoneyEnough(int value)
     {
         return this.UserMoney - value > NEG_LIMIT;
